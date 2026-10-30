@@ -1,0 +1,19 @@
+name: Correct a listing
+description: Something on a CritterShelf page is wrong or out of date.
+title: "[Fix] "
+labels: ["correction"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Listing page
+      placeholder: https://crittershelf.com/pets/...
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: What should change?
+      description: Include a source link if you can (store page, release notes, README).
+    validations:
+      required: true

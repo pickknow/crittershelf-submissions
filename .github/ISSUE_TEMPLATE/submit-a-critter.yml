@@ -1,0 +1,90 @@
+name: Submit a critter
+description: Suggest a desktop pet, idle game, virtual pet, AI companion or coding buddy for CritterShelf.
+title: "[Submit] "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting something for [CritterShelf](https://crittershelf.com)!
+        Every submission is checked by a person before it goes on the shelf. Fields marked * are required.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: e.g. Taskbar Titans
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Official link
+      description: Steam, itch.io, GitHub, App Store or the official website. No affiliate or shortened links.
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Kind
+      options:
+        - Desktop Pet
+        - Idle & Cozy Game
+        - Virtual Pet
+        - AI Pet / AI Companion
+        - Agent Pet / Coding Buddy
+    validations:
+      required: true
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Platforms
+      options:
+        - label: Windows
+        - label: macOS
+        - label: Linux
+        - label: Browser
+        - label: VS Code / editor
+        - label: Mobile
+        - label: Hardware device
+  - type: dropdown
+    id: pricing
+    attributes:
+      label: Price
+      options:
+        - Free
+        - Open source
+        - Paid
+        - Freemium / subscription
+        - Name your price
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What is it?
+      description: One or two sentences. Where does it live on screen, and what does it do?
+    validations:
+      required: true
+  - type: input
+    id: media
+    attributes:
+      label: Screenshot or GIF (optional)
+      description: A link to an official image showing it on a desktop. You can also drag an image into this box.
+  - type: dropdown
+    id: relation
+    attributes:
+      label: Are you involved with it?
+      options:
+        - I made it / I'm on the team
+        - I'm a user or fan
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before you submit
+      options:
+        - label: The link is the official source, and the project does not use characters or art it doesn't have the rights to.
+          required: true
